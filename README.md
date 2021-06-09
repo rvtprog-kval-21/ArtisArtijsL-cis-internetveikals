@@ -32,6 +32,6 @@ Wamp programmatūra
 Noklikšķiniet uz "WAMP SERVER 64 BITS (X64).
 Tagad noklikšķiniet uz saites "lejupielādēt tieši", lai sāktu lejupielādi.
 Veiciet dubultklikšķi uz lejupielādētā faila, lai palaistu WAMP instalēšanas programmu
-* Lejupielādēt un ienstalēt Coposer
+* Lejupielādēt un ienstalēt Composer
 * Caur termināli palaist attiecīgās komandas: npm install; npm run serve;
 * Mājaslapa pēc servera uzstādīšanas ir pieejama zem http://localhost:8000 adreses
