@@ -22,7 +22,7 @@ Projektā tiek izmantots:
 
 
 ## Vajadzīgā programmatūra:
-Interneta pārlūkprogramma
+Interneta pārlūkprogramma, kā arī
 Wamp programmatūra
 
 ## Uzstādīšanas instrukcijas
