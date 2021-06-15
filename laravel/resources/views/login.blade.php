@@ -8,18 +8,18 @@
             <!----------------------- Logo ---------------------->
             <div class="navbar">
                 <div class="logo">
-                    <a href="/"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="websites logo"></a>
+                    <a href="index.blade.php"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="websites logo"></a>
                 </div>
-            <!--------------------------------------------------->
+                <!--------------------------------------------------->
 
-            <!-- -----------------------Menu -------------------->
+                <!-- -----------------------Menu -------------------->
                 <nav>
                     <ul>
                         <li><a href="/">Home</a> </li>
                         <li><a href="/products">Products</a> </li>
                         <li><a href="/about">About</a> </li>
                         <li><a href="/email">Contact</a> </li>
-                        <li><a href="/account">Account</a> </li>
+                        <li><a href="/accout">Account</a> </li>
 
                     </ul>
                 </nav>
@@ -27,53 +27,29 @@
             </div>
             <!---------------------------------------------------->
             <div class="row">
-            <div class="col-2">
-            <div class="contact-form">
-                <h1>Register</h1>
-                <p>Already registered? Press here to <a href="/login">Login in</a></p>
+                <div class="col-2">
+                    <div class="contact-form">
+                        <h1>Log in</h1>
+                        <p>Don't have account yet? Press here to <a href="/account">register</a></p>
 
-                @if(Session::has('success'))
-                    <div class="alert alert-success" role="alert">
-                        {{Session::get('success')}}
+
+
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="txtb">
+                                <label for="nickname">Nickname: </label>
+                                <input type="text" name="nickname" required placeholder="Enter Your Nickname" id="nickname" class="form-control">
+                            </div>
+
+                            <div class="txtb">
+                                <label for="password">Password </label>
+                                <input type="password" name="password" id="password" required placeholder="Enter Your Password" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn">Log in</button>
+                        </form>
                     </div>
-                @endif
-
-            <form action="{{route('store')}}" method="POST">
-                @csrf
-                <div class="txtb">
-                    <label for="nickname">Nickname: </label>
-                    <input type="text" name="nickname" required placeholder="Enter Your Nickname" id="nickname" class="form-control">
                 </div>
-
-                <div class="txtb">
-                    <label for="password">Password </label>
-                    <input type="password" name="password" id="password" required placeholder="Enter Your Password" class="form-control">
-                </div>
-
-                <div class="txtb">
-                    <label for="phone">Phone number: </label>
-                    <input type="number" name="phone" id="phone" required placeholder="Enter Your Phone" class="form-control">
-                </div>
-
-                <div class="txtb">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" required placeholder="Enter Your Email" class="form-control">
-                </div>
-
-                <div class="txtb">
-                    <label for="address">Address: </label>
-                    <input type="text" name="address" id="address" required placeholder="Enter Your Address" class="form-control">
-                </div>
-
-                <div class="txtb">
-                    <label for="address">Name: </label>
-                    <input type="text" name="name" id="name" required placeholder="Enter Your Name" class="form-control">
-                </div>
-
-                <button type="submit" class="btn">Register</button>
-            </form>
-            </div>
-            </div>
             </div>
 
 

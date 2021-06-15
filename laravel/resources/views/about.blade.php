@@ -8,14 +8,14 @@
         <!----------------------- Logo ---------------------->
         <div class="navbar">
             <div class="logo">
-                <a href="index.blade.php"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
+                <a href="/"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
             </div>
         <!--------------------------------------------------->
 
         <!-- -----------------------Menu -------------------->
             <nav>
                 <ul>
-                    <li><a href="index.blade.php">Home</a> </li>
+                    <li><a href="/">Home</a> </li>
                     <li><a href="/products">Products</a> </li>
                     <li><a href="/about">About</a> </li>
                     <li><a href="/email">Contact</a> </li>
@@ -36,7 +36,7 @@
                 <a href="" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col-2">
-                <img src="{{ asset('/storage/pic/model1.png') }}" alt="front model">
+                <img src="{{ asset('/storage/pic/12.png') }}" alt="front model">
 
             </div>
         </div>
@@ -48,13 +48,13 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-2" style="float: left; width: 40%; text-align: right;">
-                    <img src="{{ asset('/storage/pic/proactiv1.png') }}" class="offer-img"  width="70%" alt="asap rocky's personal style">
+                    <img src="{{ asset('/storage/pic/Es.png') }}" class="offer-img"  width="70%" alt="asap rocky's personal style">
                 </div>
                 <div class="col-2" style="float: left; width: 60%; ">
 
                     <h1>Our lead web developer</h1>
-                    <div style="width: 50%;">Our webiste was created by Atis Lacis. with his touch of style. we created this ecomerce website. Without him we wouldn't made it where
-                    we are right now. With a lot of projects stil in future for our young web developer. We cant stress this enough how much we recommend  him to who ever is thinking of
+                    <div style="width: 50%;">Our website was created by Atis Lacis. with his touch of style. we created this ecommerce website. Without him we wouldn't made it where
+                    we are right now. With a lot of projects still in future for our young web developer. We cant stress this enough how much we recommend  him to who ever is thinking of
                     recruiting him.</div>
                     <p></p>
                     <a href="" class="btn">Read more &#8594;</a>
@@ -78,8 +78,7 @@
                 </div>
                 <div class="footer-col-2">
                     <!-- img -->
-                    <p>Logo teksts, pec tam, lai aizvietotu ar istu tekstu,
-                        pec laika protams, bet augstas kvalitates</p>
+                    <p>Reisa foundations, style and fashion for everyone</p>
                 </div>
                 <div class="footer-col-3">
                     <h3>Refrence Material</h3>

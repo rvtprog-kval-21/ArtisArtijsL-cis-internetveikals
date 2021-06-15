@@ -382,7 +382,7 @@ select:focus{
 
 
 
-/* product page */
+/* products page */
 
 .single-product{
     margin-top: 80px;
@@ -424,7 +424,7 @@ input:focus{
 }
 
 .small-img-col{
-    flex-basis: 20%;
+    flex-basis: 40%;
     cursor: pointer;
 }
 
@@ -462,7 +462,7 @@ table{
     max-width: 600px;
     background: #f7f7f7;
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 30px 40px;

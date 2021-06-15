@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +31,22 @@ Route::get('/email', function () {
     return view('email');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
+
+Route::get('/email',[ContactController::class,'contact']);
+
 Route::resource('products', \App\Http\Controllers\ProductController::class);
 
+Route::post('/send-message',[ContactController::class,'sendEmail'])->name('contact.send');
+
+Route::get('account', [RegisterController::class,'index']);
+
+Route::post('index', [RegisterController::class,'store'])->name('store');
+
+Route::post('account', [RegisterController::class,'index'])->name('account'); // name index
 
 Auth::routes();
 

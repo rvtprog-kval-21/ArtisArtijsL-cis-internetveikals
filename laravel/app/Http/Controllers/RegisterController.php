@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Users;
 use Illuminate\Http\Request;
-use App\Models\Product;
 
-class ProductController extends Controller
+class RegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $products = Product::all();
-
-        return view('product')->with('products', $products);
+        return view('account');
     }
 
     /**
@@ -26,7 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+       //
     }
 
     /**
@@ -37,29 +35,40 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nickname' => 'required',
+            'password' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+        ]);
+
+        Users::create($request->all());
+
+        return redirect()->route('account')
+            ->with('success', 'User registered Successfully');
     }
+
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @param  \App\Models\Users  $users
+     * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Users $users)
     {
-        $product = Product::findOrFail($id);
-
-        return view('products')->with('product', $product);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Users $users)
     {
         //
     }
@@ -68,10 +77,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Users $users)
     {
         //
     }
@@ -79,10 +88,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Users $users)
     {
         //
     }

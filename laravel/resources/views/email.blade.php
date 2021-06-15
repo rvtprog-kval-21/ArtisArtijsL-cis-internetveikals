@@ -9,7 +9,7 @@
             <!----------------------- Logo ---------------------->
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.blade.php"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
+                    <a href="/"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
                 </div>
             <!--------------------------------------------------->
 
@@ -30,29 +30,35 @@
             <div class="row">
             <div class="col-2">
             <div class="contact-form">
-            <form action="" method="POST">
                 <h1>Contact Us</h1>
+                @if(Session::get('message_sent'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('message_sent')}}
+                    </div>
+                @endif
+            <form method="POST" action="{{route('contact.send')}}" enctype="multipart/form-data">
+                @csrf
                 <div class="txtb">
-                    <label>Full Name: </label>
-                    <input type="text" name="name" required placeholder="Enter Your Name">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" required placeholder="Enter Your Name" class="form-control">
                 </div>
 
                 <div class="txtb">
-                    <label>Email: </label>
-                    <input type="email" name="email" required placeholder="Enter Your Email">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" required placeholder="Enter Your Email" class="form-control">
                 </div>
 
                 <div class="txtb">
-                    <label>Phone number: </label>
-                    <input type="number" name="phone" required placeholder="Enter Your Phone">
+                    <label for="phone">Phone number: </label>
+                    <input type="number" name="phone" required placeholder="Enter Your Phone" class="form-control">
                 </div>
 
                 <div class="txtb">
-                    <label>Your Message: </label>
-                    <textarea name="message" required></textarea>
+                    <label for="message">Your Message: </label>
+                    <textarea name="message" required class="form-control"></textarea>
                 </div>
 
-                <button class="btn">Send</button>
+                <button type="submit" class="btn">Send</button>
             </form>
             </div>
             </div>

@@ -7,7 +7,7 @@
         <!----------------------- Logo ---------------------->
         <div class="navbar">
             <div class="logo">
-                <a href="index.blade.php"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
+                <a href="/"><img src="{{ asset('/storage/pic/reisa.logo.png') }}" width="125px" alt="logomodel"></a>
             </div>
         <!--------------------------------------------------->
 
@@ -16,8 +16,8 @@
                 <ul>
                     <li><a href="index.blade.php">Home</a> </li>
                         <li><a href="/products">Products</a> </li>
-                        <li><a href="/about">About Us</a> </li>
-                        <li><a href="/email">Contact Us</a> </li>
+                        <li><a href="/about">About</a> </li>
+                        <li><a href="/email">Contact</a> </li>
                         <li><a href="/account">Account</a> </li>
 
                 </ul>
@@ -29,7 +29,7 @@
             <div class="col-2">
                 <h1>Fashion store <br> For you!</h1>
                 <p>Style is something each of us already has, all we need to do is find it.<br> Fashions fade, style is eternal.</p>
-                <a href="" class="btn">Explore Now &#8594;</a>
+                <a href="/products" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col-2">
                 <img src="{{ asset('/storage/pic/model1.png') }}" alt="front model">
@@ -47,12 +47,12 @@
 &nbsp;
 &nbsp;
 
-    <!------- featured products -------->
+    <!------- Piedavatie produkti-------->
     <div class="small-conteiner">
         <h2 class="title">Featured products</h2>
         <div class="row">
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/burberry/n1.jpg') }}"   alt="burrbery trench coat"></a>
+                <a href="/products/4"><img src="{{ asset('/storage/pic/burberry/n1.jpg') }}"   alt="burrbery trench coat"></a>
                 <h4>Burberry trench coat</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/prada/prada1.jpg') }}"  width="500" height="315" alt="prada handbag"></a>
+                <a href="/products/3"><img src="{{ asset('/storage/pic/prada/prada1.jpg') }}"  width="500" height="315" alt="prada handbag"></a>
                 <h4>Prada hand bag</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="col-4">
-                <a href="product.blade.php"><img src="{{ asset('/storage/pic/gucci/1.jpg') }}" alt="gucci cowboy boots"></a>
+                <a href="/products/1"><img src="{{ asset('/storage/pic/gucci/1.jpg') }}" alt="gucci cowboy boots"></a>
                 <h4>Gucci cowboys boots</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -91,7 +91,7 @@
             </div>
 
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/versace/1.jpg') }}"  alt="versace flared trousers"></a>
+                <a href="/products/5"><img src="{{ asset('/storage/pic/versace/1.jpg') }}"  alt="versace flared trousers"></a>
                 <h4>Versace flared trousers</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -103,11 +103,11 @@
                 <p>$750.00</p>
             </div>
         </div>
-<!-----------------Products on Saaaaaaaaaalllleeeeee ------------------>
+<!-----------------Atlaides produkti, Products on Saaaaaaaaaalllleeeeee ------------------>
         <h2 class="title-2">Products on Sale</h2>
         <div class="row">
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/fendi/1.jpg') }}" alt="fendi silk dress"></a>
+                <a href="/products/2"><img src="{{ asset('/storage/pic/fendi/1.jpg') }}" alt="fendi silk dress"></a>
                 <h4>Fendi silk Shirtdress</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -120,7 +120,7 @@
             </div>
 
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/ysl/1.jpg') }}" alt="ysl pants" ></a>
+                <a href="/products/6"><img src="{{ asset('/storage/pic/ysl/1.jpg') }}" alt="ysl pants" ></a>
                 <h4>YSL pants</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -133,7 +133,7 @@
             </div>
 
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/dress/1.jpg') }}" alt="ganni dress"></a>
+                <a href="/products/7"><img src="{{ asset('/storage/pic/dress/1.jpg') }}" alt="ganni dress"></a>
                 <h4>Ganni Black and red dress</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -146,7 +146,7 @@
             </div>
 
             <div class="col-4">
-                <a href=""><img src="{{ asset('/storage/pic/burberry/bra1.jpg') }}"  alt="burberry sports bra"></a>
+                <a href="/products/8"><img src="{{ asset('/storage/pic/burberry/bra1.jpg') }}"  alt="burberry sports bra"></a>
                 <h4>Burberry sports bra</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -161,7 +161,7 @@
     </div>
 
 
-<!---------- offer ------------------------------->
+<!---------- Otra modela dala------------------------------->
 <div class="offer">
     <div class="small-container">
         <div class="row">
@@ -182,13 +182,13 @@
     </div>
 </div>
 
-<!------------ testimonial --------------------------->
+<!------------ atsauksmes --------------------------->
     <div class="testimonial">
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
-                    <p>Clothes for every stile easy to find my way around, also the simplicity in style is great. </p>
+                    <p>Clothes for every style easy to find my way around, also the simplicity in style is great. </p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
-                    <p>Magnificent, i can allways find what i like and what i would love to wear.</p>
+                    <p>Magnificent, i can allways find what i like and what i would love to wear. Amazing work!</p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
